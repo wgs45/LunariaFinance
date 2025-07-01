@@ -3,21 +3,21 @@ import "@styles/globals.css";
 
 export default function Dashboard() {
   return (
-    <div className="">
-      <h1 className="">Lunaria Finance</h1>
-      <div className="">
-        <h4 className="">Your Balance: </h4>
-        <h1 className="">$0.00</h1>
+    <div className="container">
+      <h1 className="text-3xl">Lunaria Finance</h1>
+      <div>
+        <h4>Your Balance: </h4>
+        <h1 className="text-3xl">$0.00</h1>
 
-        <div className="">
-          <div className="">
-            <h4 className="">Income</h4>
-            <p className="">+$0.00</p>
+        <div className="inc-exp-container">
+          <div className="flex-1 text-center border-r border-[#dedede]">
+            <h4>Income</h4>
+            <p className="money plus">+$0.00</p>
           </div>
         </div>
-        <div className="">
-          <h4 className="">Expense</h4>
-          <p className="">-$0.00</p>
+        <div className="flex-1 text-center">
+          <h4>Expense</h4>
+          <p className="money minus">-$0.00</p>
         </div>
       </div>
 

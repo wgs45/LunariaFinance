@@ -39,4 +39,68 @@
     display: inline-block;
     margin-block: 2.5px;
   }
+
+  input[type="text"],
+  input[type="number"] {
+    display: block;
+    border: 1px solid #dedede;
+    border-width: 1px;
+    border-radius: 2px;
+    padding-inline: 2.5px;
+    padding-block: 2px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@layer components {
+  .container {
+    margin-block: calc(var(--spacing) * 7);
+    margin-inline: auto;
+    width: 400px;
+  }
+
+  .inc-exp-container {
+    background-color: #f7f7f7;
+    box-shadow: var(--shadow-custom);
+    padding: calc(var(--spacing) * 4);
+    justify-content: space-between;
+    margin-block: 5px;
+  }
+
+  .money {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-block: 1px;
+  }
+
+  .money.plus {
+    color: #2ecc71;
+  }
+
+  .money.minus {
+    color: #c0392b;
+  }
+
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--shadow-custom);
+    color: #f7f7f7;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin-block: 2px;
+    margin-bottom: 8px;
+    padding: 2.5;
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .shadow-custom {
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+  }
 }
