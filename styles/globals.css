@@ -14,8 +14,8 @@
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    font-size: 18px;
     font-family: "Lato", sans-serif;
+    font-size: 18px;
   }
 
   h1 {
@@ -37,17 +37,15 @@
 
   label {
     display: inline-block;
-    margin-block: 2.5px;
+    margin-block: 10px;
   }
 
   input[type="text"],
   input[type="number"] {
     display: block;
     border: 1px solid #dedede;
-    border-width: 1px;
     border-radius: 2px;
-    padding-inline: 2.5px;
-    padding-block: 2px;
+    padding: 8px;
     font-size: 16px;
     width: 100%;
   }
@@ -55,23 +53,23 @@
 
 @layer components {
   .container {
-    margin-block: calc(var(--spacing) * 7);
-    margin-inline: auto;
+    margin: 30px auto;
     width: 400px;
   }
 
   .inc-exp-container {
-    background-color: #f7f7f7;
+    background-color: #fff;
     box-shadow: var(--shadow-custom);
-    padding: calc(var(--spacing) * 4);
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
-    margin-block: 5px;
+    margin: 20px 0;
   }
 
   .money {
     font-size: 20px;
     letter-spacing: 0.1em;
-    margin-block: 1px;
+    margin: 5px 0;
   }
 
   .money.plus {
@@ -86,14 +84,58 @@
     cursor: pointer;
     background-color: #9c88ff;
     box-shadow: var(--shadow-custom);
-    color: #f7f7f7;
+    color: #fff;
     border: 0;
     display: block;
     font-size: 16px;
-    margin-block: 2px;
-    margin-bottom: 8px;
-    padding: 2.5;
+    margin: 10px 0 30px;
+    padding: 10px;
     width: 100%;
+  }
+
+  .delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--shadow-custom);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+
+  .list li:hover .delete-btn {
+    opacity: 1;
   }
 }
 

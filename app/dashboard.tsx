@@ -1,5 +1,4 @@
 import React from "react";
-import "@styles/globals.css";
 
 export default function Dashboard() {
   return (
@@ -21,20 +20,31 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <h3 className="">History</h3>
-      <ul className=""></ul>
+      <h3>History</h3>
+      <ul className="list">
+        {/* sample transaction */}
+        <li className="plus">
+          Freelance $100
+          <button className="delete-btn">X</button>
+        </li>
+        <li className="minus">
+          Coffee $5
+          <button className="delete-btn">X</button>
+        </li>
+      </ul>
 
       <h3>Add new transaction</h3>
-      <div className="">
+      <div>
         <label>Text</label>
         <input type="text" placeholder="Enter text..." />
       </div>
-      <div className="">
+      <div>
         <label>
           Amount <br /> (negative - expense, positive - income)
         </label>
+        <input type="number" placeholder="Enter amount..." />
       </div>
-      <button>Add transaction</button>
+      <button className="btn">Add transaction</button>
     </div>
   );
 }
